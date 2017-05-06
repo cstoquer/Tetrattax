@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Tile : MonoBehaviour {
 
+	private int type;
+	public bool lockedForMatching = false;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -11,5 +14,9 @@ public class Tile : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	bool Match (Tile tile) {
+		return this.type === tile.type;
 	}
 }
